@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="projet"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/yael/CLionProjects/projet/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projet">
+				<Option output="C:/Users/yael/CLionProjects/projet/cmake-build-debug/projet.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yael/CLionProjects/projet/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 projet"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projet/fast">
+				<Option output="C:/Users/yael/CLionProjects/projet/cmake-build-debug/projet.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yael/CLionProjects/projet/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 projet/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/yael/CLionProjects/projet/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/yael/CLionProjects/projet/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\yael\CLionProjects\projet\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/AbstractCommand.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/AbstractCommand.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/Command.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/CommandExpression.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/CommandExpression.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/ConditionCommand.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/ConditionCommand.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/EnterC.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/EnterC.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/Exspression.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/ExspressionReader.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/IfCommand.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/IfCommand.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/Interpreter.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/Interpreter.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/LoopCommand.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/LoopCommand.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/PrintCommand.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/PrintCommand.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/ProgramData.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/ProgramData.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/SleepCommand.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/SleepCommand.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/expressionVector.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/cmake-build-debug/expressionVector.h">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/main.cpp">
+			<Option target="projet"/>
+		</Unit>
+		<Unit filename="C:/Users/yael/CLionProjects/projet/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

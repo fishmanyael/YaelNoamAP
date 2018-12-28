@@ -1,18 +1,19 @@
-#ifndef COMMAND_H
-#define COMMAND_H
+//
+// Created by yael on 17/12/2018.
+//
 
-#include <vector>
+#ifndef PROJET_DOCOMMAND_H
+#define PROJET_DOCOMMAND_H
+
 #include <string>
+#include <vector>
 
 using namespace std;
-
-class Command {
-protected:
-	int _argumentsAmount;
-
+class Command{
 public:
-	virtual int getArgumentsAmount() = 0;
-	virtual void doCommand(vector<string>& arguments) = 0;
+    virtual void execute() =0;
 };
 
-#endif
+
+
+#endif //PROJET_DOCOMMAND_H
