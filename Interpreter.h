@@ -1,42 +1,32 @@
 //
-// Created by yael on 17/12/2018.
+// Created by nsc on 12/31/18.
 //
 
-#ifndef PROJET_CMDREADER_H
-#define PROJET_CMDREADER_H
+#ifndef APPNOAMYAEL_INTERPRETER_H
+#define APPNOAMYAEL_INTERPRETER_H
 
-
-#include "string"
-#include "Exspression.h"
-#include "Command.h"
-#include "ProgramData.h"
-#include <sstream>
-#include <iostream>
-#include <fstream>
-#include <vector>
 #include <map>
+#include <vector>
+#include "ProgramData.h"
 
 using namespace std;
 
-
 class Interpreter {
-    vector<string> lexerVector;
-    vector<string>::iterator first;
-    vector<string>::iterator end;
-    ProgramData* programData;
-    map<string, Expression *> commandMap;
+
+    //the data of the variables in the program
+    ProgramData _data;
+
+    //the bounded vars (each var can be bounded to more than one thing)
+    map<string, vector<string>> _bindTable;
+
 public:
-    Interpreter(istream infile) {
-        lexerVector=lexer(infile);
-        programData=new ProgramData();
-        end=lexerVector.end();
 
-    }
+    Interpreter();
+    static vector<string> lexer(string line);
 
-    vector<string> &lexer(istream &infile);
 
-    int parser(vector<string> &words);
+
 };
 
 
-#endif //PROJET_CMDREADER_H
+#endif //APPNOAMYAEL_INTERPRETER_H

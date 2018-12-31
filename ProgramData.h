@@ -1,9 +1,10 @@
 //
-// Created by yael on 26/12/2018.
+// Created by nsc on 12/31/18.
 //
 
-#ifndef PROJET_DATA_H
-#define PROJET_DATA_H
+#ifndef APPNOAMYAEL_PROGRAMDATA_H
+#define APPNOAMYAEL_PROGRAMDATA_H
+
 
 #include <string>
 #include <vector>
@@ -13,9 +14,10 @@
 using namespace std;
 
 class ProgramData {
-    //map<string,string> var_pathes;
+
     map<string, double> symbol_table;
     mutex locker;
+
 public:
 
     bool containsKey(string& key){
@@ -28,4 +30,4 @@ public:
 };
 
 
-#endif //PROJET_DATA_H
+#endif //APPNOAMYAEL_PROGRAMDATA_H

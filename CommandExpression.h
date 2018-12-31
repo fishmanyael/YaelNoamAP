@@ -1,20 +1,34 @@
 //
-// Created by yael on 26/12/2018.
+// Created by nsc on 12/31/18.
 //
 
-#ifndef PROJET_COMMANDEXSPRESSION_H
-#define PROJET_COMMANDEXSPRESSION_H
+#ifndef APPNOAMYAEL_COMMANDEXPRESSION_H
+#define APPNOAMYAEL_COMMANDEXPRESSION_H
 
-#include "Exspression.h"
+
+#include <string>
+#include <vector>
 #include "Command.h"
-class CommandExpression : public Expression{
-    Command &c;
+
+using namespace std;
+
+class CommandExpression {
+
+    Command* _command{};
 
 public:
-    CommandExpression(Command& command);
+    CommandExpression() = default;
 
-    double calculate() override;
+    explicit CommandExpression(Command* command) {
+        _command = command;
+    }
+
+    virtual double calculate(vector<string>& arguments, int index);
+
+    ~CommandExpression() {
+        delete _command;
+    }
 };
 
 
-#endif //PROJET_COMMANDEXSPRESSION_H
+#endif //APPNOAMYAEL_COMMANDEXPRESSION_H

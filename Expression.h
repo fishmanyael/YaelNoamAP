@@ -1,9 +1,16 @@
-#ifndef APP_EXPRESSION_H
-#define APP_EXPRESSION_H
+//
+// Created by nsc on 12/31/18.
+//
+
+#ifndef APPNOAMYAEL_EXPRESSION_H
+#define APPNOAMYAEL_EXPRESSION_H
+
 
 class Expression {
+
 public:
     virtual double calculate() = 0;
 };
 
-#endif //APP_EXPRESSION_H
+
+#endif //APPNOAMYAEL_EXPRESSION_H

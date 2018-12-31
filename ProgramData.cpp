@@ -1,5 +1,5 @@
 //
-// Created by yael on 26/12/2018.
+// Created by nsc on 12/31/18.
 //
 
 #include "ProgramData.h"
@@ -14,4 +14,3 @@ void ProgramData::setVar(string &key, double value) {
 double ProgramData::getVar(string &key) {
     return symbol_table[key];
 }
-
