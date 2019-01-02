@@ -127,6 +127,18 @@ Expression *ExpressionHandler::createExpression(string exstr, Expression *left, 
     return new Number(stod(exstr));
 }
 
-double ExpressionHandler::getExpression() {
+double ExpressionHandler::getValue() {
     return readQ()->calculate();
+}
+
+ExpressionHandler &ExpressionHandler::getTillEndOfLine(vector<string>::iterator &it, ProgramData &p) {
+    vector<string> &v = *new vector<string>();
+    while (*it != "\n" && *it != "{") {
+        v.push_back(*it);
+        it++;
+    }
+    while (*it == "\n" || *it == "{") {
+        it++;
+    }
+    return *new ExpressionHandler(v, p);
 }

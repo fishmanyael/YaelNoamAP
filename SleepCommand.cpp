@@ -3,9 +3,8 @@
 //
 
 #include "SleepCommand.h"
-//#include <unistd.h>
 
-void SleepCommand::doCommand() {
+void SleepCommand::execute() {
     int howManySleep;
     string word=goToNextWord();
     if ('0'<=word[0] && word[0]<='9'){
@@ -13,4 +12,8 @@ void SleepCommand::doCommand() {
     } else{
         howManySleep=(int)programData.getVar(word);
     }
+}
+
+SleepCommand::SleepCommand(ProgramData &p, vector<string>::iterator &it) : AbstractCommand(p, it) {
+
 }

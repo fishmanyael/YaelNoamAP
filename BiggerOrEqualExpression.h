@@ -8,9 +8,10 @@
 #include "BinaryExpression.h"
 
 class BiggerOrEqualExpression : public BinaryExpression {
-    BiggerOrEqualExpression(Expression *a, Expression *b) : BinaryExpression(a, b) {}
+public:
+    BiggerOrEqualExpression(Expression *a, Expression *b);
 
-    double calculate() override { return _left->calculate() >= _right-> calculate(); };
+    double calculate() override;;
 };
 
 #endif //APPNOAMYAEL_BIGGEROREQUALEXPRESSION_H

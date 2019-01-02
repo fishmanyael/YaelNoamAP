@@ -1,23 +1,19 @@
 //
-// Created by nsc on 12/31/18.
+// Created by yael on 17/12/2018.
 //
 
-#ifndef APPNOAMYAEL_COMMAND_H
-#define APPNOAMYAEL_COMMAND_H
+#ifndef PROJET_DOCOMMAND_H
+#define PROJET_DOCOMMAND_H
 
-
-#include <vector>
 #include <string>
+#include <vector>
 
 using namespace std;
-
-class Command {
-protected:
-    int _argumentsAmount;
-
+class Command{
 public:
-    virtual int doCommand(vector<string>& arguments, int index) = 0;
+    virtual void execute() =0;
 };
 
 
-#endif //APPNOAMYAEL_COMMAND_H
+
+#endif //PROJET_DOCOMMAND_H

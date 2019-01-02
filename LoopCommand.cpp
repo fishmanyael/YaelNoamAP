@@ -4,9 +4,15 @@
 #include "Interpreter.h"
 #include "LoopCommand.h"
 
-void LoopCommand::execute() {
 
-}
 
 LoopCommand::LoopCommand(ProgramData &p, vector<string>::iterator &it, map<string, Expression *> &commands)
         : ConditionCommand(p, it, commands) {}
+
+void LoopCommand::execute() {
+    getCondition();
+    while(check()){
+        run();
+    }
+    gotoEnd();
+}

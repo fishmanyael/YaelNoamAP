@@ -9,11 +9,9 @@
 
 class SleepCommand : public AbstractCommand {
 public:
-    SleepCommand(ProgramData &p, vector<string>::iterator &it) : AbstractCommand(p, it) {
+    SleepCommand(ProgramData &p, vector<string>::iterator &it);
 
-    }
-
-    void doCommand();
+    void execute();
 };
 
 

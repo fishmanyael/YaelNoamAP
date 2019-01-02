@@ -7,10 +7,11 @@
 
 #include "BinaryExpression.h"
 
-class EqualExpresison : public BinaryExpression {
-    EqualExpresison(Expression *a, Expression *b) : BinaryExpression(a, b) {}
+class EqualExpression : public BinaryExpression {
+public:
+    EqualExpression(Expression *a, Expression *b);
 
-    double calculate() override { return _left->calculate() == _right-> calculate(); };
+    double calculate() override;;
 };
 
 #endif //APPNOAMYAEL_EQUALEXPRESSION_H

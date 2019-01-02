@@ -1,17 +1,18 @@
 //
-// Created by nsc on 12/31/18.
+// Created by yael on 31/12/2018.
 //
 
-#ifndef APPNOAMYAEL_PLUS_H
-#define APPNOAMYAEL_PLUS_H
+
+#ifndef APP_PLUS_H
+#define APP_PLUS_H
 
 
 #include "BinaryExpression.h"
 
 class Plus : public BinaryExpression {
-    Plus(Expression *a, Expression *b) : BinaryExpression(a, b) {}
-
-    double calculate() override { return _left->calculate() + _right-> calculate(); };
+public:
+    Plus(Expression * a, Expression * b);
+    double calculate();
 };
 
-#endif //APPNOAMYAEL_PLUS_H
+#endif

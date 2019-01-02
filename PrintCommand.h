@@ -11,7 +11,7 @@ class PrintCommand: public AbstractCommand {
     PrintCommand(ProgramData p, vector<string>::iterator it);
 
 public:
-    void doCommand();
+    void execute();
 };
 
 

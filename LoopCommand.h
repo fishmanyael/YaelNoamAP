@@ -14,12 +14,7 @@ class LoopCommand final : public ConditionCommand {
 public:
     LoopCommand(ProgramData &p, vector<string>::iterator &it, map<string, Expression *> &commands);
 
-    virtual void execute(){
-        //read the statement
-        while(check()){
-            run();
-        }
-    }
+    virtual void execute();
 
 };
 

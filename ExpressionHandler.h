@@ -33,20 +33,10 @@ class ExpressionHandler {
     ExpressionHandler(vector<string> &expressionVector, ProgramData &p);
 
 public:
-    double getExpression();
+    double getValue();
 
-    ExpressionHandler &getTillEndOfLine(vector<string>::iterator &it, ProgramData p) {
-        vector<string> &v = *new vector<string>();
-        while (*it != "\n" && *it != "{") {
-            v.push_back(*it);
-            it++;
-        }
-        while (*it == "\n" || *it == "{") {
-            it++;
-        }
+    static ExpressionHandler &getTillEndOfLine(vector<string>::iterator &it, ProgramData &p);
 
-        return *new ExpressionHandler(v, p);
-    }
 };
 
 

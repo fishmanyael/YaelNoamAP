@@ -5,7 +5,7 @@
 #include "IfCommand.h"
 #include "stack"
 void IfCommand::execute() {
-    //read the statement
+    getCondition();
     if (check()) {
         run();
     }

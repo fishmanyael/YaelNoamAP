@@ -8,9 +8,10 @@
 #include "BinaryExpression.h"
 
 class SmallerExpression : public BinaryExpression {
-    SmallerExpression(Expression *a, Expression *b) : BinaryExpression(a, b) {}
+public:
+    SmallerExpression(Expression *a, Expression *b);
 
-    double calculate() override { return _left->calculate() < _right-> calculate(); };
+    double calculate() override;;
 };
 
 #endif //APPNOAMYAEL_SMALLEREXPRESSION_H

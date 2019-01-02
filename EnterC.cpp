@@ -8,6 +8,8 @@
 void EnterC::doCommand() {
     char c;
     cin>>c;
+    goToNextWord();
+    goToNextWord();
 }
 
 EnterC::EnterC(ProgramData &p, vector<string>::iterator& it) : AbstractCommand(p, it) {}

@@ -1,16 +1,15 @@
-//
-// Created by nsc on 12/31/18.
-//
+#ifndef APP_DEV_H
+#define APP_DEV_H
 
-#ifndef APPNOAMYAEL_DIV_H
-#define APPNOAMYAEL_DIV_H
 
 #include "BinaryExpression.h"
 
-class Div : public BinaryExpression {
-    Div(Expression *a, Expression *b) : BinaryExpression(a, b) {}
 
-    double calculate() override { return _left->calculate() / _right-> calculate(); };
+class Div : public BinaryExpression {
+public:
+    Div(Expression * a, Expression * b);
+    double calculate();
 };
 
-#endif //APPNOAMYAEL_DIV_H
+
+#endif //APP_DEV_H

@@ -1,9 +1,13 @@
 //
-// Created by nsc on 12/31/18.
+// Created by yael on 26/12/2018.
 //
 
 #include "CommandExpression.h"
 
-double CommandExpression::calculate(vector <string> &arguments, int index) {
-    return _command->doCommand(arguments, index);
+CommandExpression::CommandExpression(Command &command) : c(command){
+}
+
+double CommandExpression::calculate() {
+    c.execute();
+    return 0;
 }
