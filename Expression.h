@@ -1,18 +1,16 @@
 //
-// Created by yael on 25/12/2018.
+// Created by nsc on 12/31/18.
 //
 
-#ifndef EXPRESSION_H
-#define EXPRESSION_H
+#ifndef APPNOAMYAEL_EXPRESSION_H
+#define APPNOAMYAEL_EXPRESSION_H
 
-#include <vector>
-#include <string>
-
-using namespace std;
 
 class Expression {
+
 public:
     virtual double calculate() = 0;
 };
 
-#endif
+
+#endif //APPNOAMYAEL_EXPRESSION_H

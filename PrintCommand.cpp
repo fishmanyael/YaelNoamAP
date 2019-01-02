@@ -1,3 +1,4 @@
+
 //
 // Created by yael on 26/12/2018.
 //
@@ -26,5 +27,6 @@ void PrintCommand::execute() {
         ExpressionHandler &exs = ExpressionHandler::getTillEndOfLine(it, programData);
         double x = exs.getValue();
         cout << x << endl;
+        delete &exs;
     }
 }

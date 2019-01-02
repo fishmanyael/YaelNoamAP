@@ -1,4 +1,3 @@
-
 #include "Number.h"
 
 double Number::calculate() {

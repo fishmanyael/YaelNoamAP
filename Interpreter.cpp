@@ -7,17 +7,17 @@
 vector<string> &Interpreter::lexer(istream &infile) {
     vector<string> &v = *new vector<string>();
     string line;
-    while (getline(infile,line)) {
+    while (getline(infile, line)) {
         stringstream linestream(line);
         string word;
-        while(linestream>>word){
-            if (word[0]=='('){
+        while (linestream >> word) {
+            if (word[0] == '(') {
                 v.emplace_back("(");
-                word=word.substr(1);
+                word = word.substr(1);
             }
-            if (word[word.size()-1]=')'){
-                v.push_back(word.substr(0,-1));
-                word=")";
+            if (word[word.size() - 1] == ')') {
+                v.push_back(word.substr(0, -1));
+                word = ")";
             }
             v.push_back(word);
         }
@@ -28,11 +28,13 @@ vector<string> &Interpreter::lexer(istream &infile) {
 
 int Interpreter::parser(vector<string> &words) {
     vector<string>::iterator it;
-    for (it = words.begin(); it != words.end(); it++) {
+    for (it = words.begin(); it != words.end();  ) {
         if (commandMap.count(*it)) {
             Expression &c = *commandMap[*it];
             c.calculate();
-            break;
+        } else {
+            Expression &c = *commandMap["var"];
+            c.calculate();
         }
     }
     return 0;

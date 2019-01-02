@@ -1,19 +1,17 @@
 //
-// Created by yael on 26/12/2018.
+// Created by nsc on 1/2/19.
 //
 
 #include "SleepCommand.h"
+#include <unistd.h>
+#include "ExpressionHandler.h"
+
+SleepCommand::SleepCommand(ProgramData &p, vector<string>::iterator it) :AbstractCommand(p,it){}
 
 void SleepCommand::execute() {
-    int howManySleep;
-    string word=goToNextWord();
-    if ('0'<=word[0] && word[0]<='9'){
-        howManySleep=stoi(word);
-    } else{
-        howManySleep=(int)programData.getVar(word);
-    }
-}
-
-SleepCommand::SleepCommand(ProgramData &p, vector<string>::iterator &it) : AbstractCommand(p, it) {
-
+    goToNextWord();
+    ExpressionHandler& exp=ExpressionHandler::getTillEndOfLine(it,programData);
+    double x=exp.getValue();
+    usleep(x);
+    delete &exp;
 }

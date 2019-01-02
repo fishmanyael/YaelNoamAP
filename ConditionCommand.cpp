@@ -6,7 +6,7 @@
 
 ConditionCommand::ConditionCommand(ProgramData &p, vector<string>::iterator &it, map<string, Expression *> &commands)
         : AbstractCommand(p, it) {
-    this->commands=commands;
+    this->commands = commands;
 }
 
 
@@ -15,25 +15,27 @@ bool ConditionCommand::check() {
 }
 
 void ConditionCommand::run() {
-    it=start;
-    while(getWord()!="}"){
-        Expression* expression = commands[getWord()];
-        if(expression != nullptr)
-            expression->calculate();
-        else
-            commands["set"]->calculate();
+    it = start;
+    while (getWord() != "}") {
+        if (commands.count(*it)) {
+            Expression &c = *commands[*it];
+            c.calculate();
+        } else {
+            Expression &c = *commands["var"];
+            c.calculate();
+        }
     }
 }
 
 void ConditionCommand::gotoEnd() {
-    if (*it!="}"){
-        int numOfOpen=1;
-        while (numOfOpen){
-            string word=goToNextWord();
-            if (word=="{"){
+    if (*it != "}") {
+        int numOfOpen = 1;
+        while (numOfOpen) {
+            string word = goToNextWord();
+            if (word == "{") {
                 numOfOpen++;
             }
-            if (word=="}"){
+            if (word == "}") {
                 numOfOpen--;
             }
         }
@@ -46,5 +48,7 @@ void ConditionCommand::gotoEnd() {
 }
 
 void ConditionCommand::getCondition() {
-    exp=&(ExpressionHandler::getTillEndOfLine(it,programData));
+    goToNextWord();
+    exp = &(ExpressionHandler::getTillEndOfLine(it, programData));
+    start = it;
 }

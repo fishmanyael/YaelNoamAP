@@ -24,6 +24,10 @@
 #include <queue>
 #include <cstring>
 #include <map>
+#define FIRST_PRECEDENCE 100
+#define SECOND_PRECEDENCE 200
+#define LAST_PRECEDENCE 0
+#define LEFT_BRACKET_PRECEDENCE -1
 
 class Minus;
 
@@ -58,17 +62,17 @@ bool ExpressionHandler::isOperator(string &s) {
 }
 
 ExpressionHandler::ExpressionHandler(vector<string> &expressionVector, ProgramData &p) : p(p) {
-    precedence["+"] = 100;
-    precedence["-"] = 100;
-    precedence["*"] = 200;
-    precedence["/"] = 200;
-    precedence["<="] = 0;
-    precedence["=="] = 0;
-    precedence[">="] = 0;
-    precedence["!="] = 0;
-    precedence["<"] = 0;
-    precedence[">"] = 0;
-    precedence["("] = -100;
+    precedence["+"] = SECOND_PRECEDENCE;
+    precedence["-"] = SECOND_PRECEDENCE;
+    precedence["*"] = FIRST_PRECEDENCE;
+    precedence["/"] = FIRST_PRECEDENCE;
+    precedence["<="] = LAST_PRECEDENCE;
+    precedence["=="] = LAST_PRECEDENCE;
+    precedence[">="] = LAST_PRECEDENCE;
+    precedence["!="] = LAST_PRECEDENCE;
+    precedence["<"] = LAST_PRECEDENCE;
+    precedence[">"] = LAST_PRECEDENCE;
+    precedence["("] = LEFT_BRACKET_PRECEDENCE;
     shuntingYard(expressionVector);
 }
 

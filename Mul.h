@@ -1,15 +1,17 @@
-#ifndef APP_MULTIPLICATION_H
-#define APP_MULTIPLICATION_H
+//
+// Created by nsc on 12/31/18.
+//
 
+#ifndef APPNOAMYAEL_MUL_H
+#define APPNOAMYAEL_MUL_H
 
 #include "BinaryExpression.h"
 
-
 class Mul : public BinaryExpression {
 public:
-    Mul(Expression * a, Expression * b);
-    double calculate();
+    Mul(Expression *a, Expression *b) : BinaryExpression(a, b) {}
+
+    double calculate() override { return _left->calculate() * _right-> calculate(); };
 };
 
-
-#endif //APP_MULTIPLICATION_H
+#endif //APPNOAMYAEL_MUL_H

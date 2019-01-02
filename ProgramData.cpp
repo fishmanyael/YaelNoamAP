@@ -1,5 +1,5 @@
 //
-// Created by yael on 26/12/2018.
+// Created by nsc on 12/31/18.
 //
 
 #include "ProgramData.h"
@@ -15,7 +15,6 @@ double ProgramData::getVar(string &key) {
     return symbol_table[key];
 }
 
-bool ProgramData::containsKey(string &key) {
-    return (bool)(symbol_table.count(key));
-}
+void ProgramData::bind(string, string) {
 
+}

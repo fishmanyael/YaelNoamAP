@@ -9,9 +9,9 @@
 
 class NotEqualExpression : public BinaryExpression {
 public:
-    NotEqualExpression(Expression *a, Expression *b);
+    NotEqualExpression(Expression *a, Expression *b) : BinaryExpression(a, b) {}
 
-    double calculate() override;;
+    double calculate() override { return _left->calculate() != _right-> calculate(); };
 };
 
 #endif //APPNOAMYAEL_NOTEQUALEXPRESSION_H

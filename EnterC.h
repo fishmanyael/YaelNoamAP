@@ -6,10 +6,12 @@
 #define PROJET_ENTERC_H
 
 #include "AbstractCommand.h"
-class EnterC :AbstractCommand{
+
+class EnterC : public AbstractCommand {
 public:
-    EnterC(ProgramData &p, vector<string>::iterator& it);
-    void doCommand();
+    EnterC(ProgramData &p, vector<string>::iterator &it);
+
+    void execute();
 };
 
 

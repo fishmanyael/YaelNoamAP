@@ -4,7 +4,6 @@
 
 #ifndef PROJET_EXPRESSIONHANDLER_H
 #define PROJET_EXPRESSIONHANDLER_H
-#define OPERATORS_NUM 10
 
 #include <vector>
 #include <string>

@@ -9,9 +9,9 @@
 
 class BiggerOrEqualExpression : public BinaryExpression {
 public:
-    BiggerOrEqualExpression(Expression *a, Expression *b);
+    BiggerOrEqualExpression(Expression *a, Expression *b) : BinaryExpression(a, b) {}
 
-    double calculate() override;;
+    double calculate() override { return _left->calculate() >= _right-> calculate(); };
 };
 
 #endif //APPNOAMYAEL_BIGGEROREQUALEXPRESSION_H

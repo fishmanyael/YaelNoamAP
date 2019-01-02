@@ -1,18 +1,18 @@
 //
-// Created by yael on 26/12/2018.
+// Created by nsc on 1/2/19.
 //
 
-#ifndef PROJET_SLEEPCOMMAND_H
-#define PROJET_SLEEPCOMMAND_H
+#ifndef APPNOAMYAEL_SLEEPCOMMAND_H
+#define APPNOAMYAEL_SLEEPCOMMAND_H
 
 #include "AbstractCommand.h"
-
-class SleepCommand : public AbstractCommand {
+#include "ProgramData.h"
+class SleepCommand : public AbstractCommand{
 public:
-    SleepCommand(ProgramData &p, vector<string>::iterator &it);
+   SleepCommand(ProgramData& p,vector<string>::iterator it);
 
-    void execute();
+   void execute();
 };
 
 
-#endif //PROJET_SLEEPCOMMAND_H
+#endif //APPNOAMYAEL_SLEEPCOMMAND_H

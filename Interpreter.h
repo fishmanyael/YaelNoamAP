@@ -1,3 +1,4 @@
+
 //
 // Created by yael on 17/12/2018.
 //
@@ -25,6 +26,7 @@ class Interpreter {
     vector<string>::iterator end;
     ProgramData* programData;
     map<string, Expression *> commandMap;
+
 public:
     Interpreter(istream infile) {
         lexerVector=lexer(infile);

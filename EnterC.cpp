@@ -1,3 +1,5 @@
+
+
 //
 // Created by yael on 26/12/2018.
 //
@@ -5,7 +7,7 @@
 #include "EnterC.h"
 #include <iostream>
 
-void EnterC::doCommand() {
+void EnterC::execute() {
     char c;
     cin>>c;
     goToNextWord();
